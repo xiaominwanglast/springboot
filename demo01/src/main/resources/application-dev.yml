@@ -1,0 +1,19 @@
+server:
+  port: 8088
+
+
+
+
+testnames: xxx,vvv,bbb
+test.list: topic1,topic2,topic3
+test.maps: "{key1:'value1',key2:'value2'}"
+spring:
+  datasource:
+    username: root
+    password: 123456
+    url: jdbc:mysql://127.0.0.1:3306/springboot
+    driver-class-name: com.mysql.cj.jdbc.Driver
+mybatis:
+  mapper-locations: classpath:mapping/*.xml
+  type-aliases-package: com.example.demo.entity
+

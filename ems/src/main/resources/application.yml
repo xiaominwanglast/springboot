@@ -1,0 +1,15 @@
+server:
+  port: 8086
+  servlet:
+    context-path: /ems   #项目路径
+spring:
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    password: 123456
+    username: root
+    url: jdbc:mysql://127.0.0.1:3306/springboot?characterEncoding=UTF-8
+  application:
+    name: ems  #项目名字
+mybatis:
+  type-aliases-package: com.example.ems.dao
+  mapper-locations: classpath:mapping/*.xml

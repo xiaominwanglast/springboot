@@ -1,0 +1,33 @@
+server:
+  servlet:
+    context-path: /ems
+    jsp:
+      init-parameters:
+        development: true
+spring:
+  profiles:
+    active: dev
+  mvc:
+    view:
+      prefix: /WEB-INF/
+      suffix: .jsp
+    static-path-pattern: /static/**
+  devtools:
+    restart:
+      enabled: true
+      additional-paths: src/main/java
+      exclude: WEB-INF/**
+  freemarker:
+    cache: false
+  rabbitmq:
+    host: 203.195.163.209
+    port: 5672
+    username: admin
+    password: admin
+    publisher-returns: true
+    connection-timeout: 20000
+    virtual-host: my_vhost
+name: wangxm
+logging:
+  config: classpath:logback-spring.xml
+
